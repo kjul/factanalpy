@@ -41,9 +41,7 @@ pd.DataFrame(fa_res["scores"])
 ```pip install factanal```
 
 #### Dependencies
-The only dependency is the rpy2 library. 
-
-In addition to that, R must be installed on your system and accessible to rpy2.
+The only dependency is the rpy2 library. R must be installed on your system and accessible to rpy2.
 
 More information on rpy2: https://rpy2.github.io/doc/latest/html/index.html
 
