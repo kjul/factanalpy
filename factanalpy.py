@@ -21,10 +21,8 @@ def factanalpy(x, factors, scores="none", rotation="varimax", verbose=True, retu
         dict: if return_dict is set to True a dictionary containing the factanal output is returned.
     """
     pandas2ri.activate()
-    factanal = robjects.r['factanal']
-    fit = factanal(x, factors=factors, scores=scores, rotation=rotation)
-    fit_python_dict = {name: list(fit[index]) for name, index in zip(fit.names, range(0, len(fit)))}
+    fit = robjects.r['factanal'](x, factors=factors, scores=scores, rotation=rotation)
     if verbose:
         print("Uniquenesses:", str(fit[-1]).split("Uniquenesses:")[1])
     if return_dict:
-        return fit_python_dict
+        return {name: list(fit[index]) for name, index in zip(fit.names, range(0, len(fit)))}
