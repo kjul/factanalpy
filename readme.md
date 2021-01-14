@@ -12,6 +12,9 @@ Further information on R's factanal function for factor analysis: https://www.rd
 More information on the factanal output and examples: 
 https://data.library.virginia.edu/getting-started-with-factor-analysis/
 
+#### Installation
+
+```pip install factanal```
 
 #### Example
 
@@ -63,11 +66,6 @@ Test of the hypothesis that 4 factors are sufficient.
 The chi square statistic is 0.37 on 2 degrees of freedom.
 The p-value is 0.833 
 ```
-
-
-#### Installation
-
-```pip install factanal```
 
 #### Dependencies
 The only dependency is the rpy2 library. R must be installed on your system and accessible to rpy2.
